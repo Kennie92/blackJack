@@ -12,7 +12,7 @@ namespace BlackJack
         {
             const double startingBalance = 100.00;
             double playerBalance = startingBalance;
-            string name;
+            string playerName;
             
            
             
@@ -21,9 +21,8 @@ namespace BlackJack
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Welcome to Kennie's and Ludwig's Casino");
             Console.WriteLine("What is your name dear gambler?");
-            Console.ReadLine();
-            name = Console.ReadLine();
-            Console.WriteLine($"Hello {name}");
+            playerName = Console.ReadLine();
+            Console.WriteLine("\nHello " + playerName);
             Console.WriteLine($"Your current balance is {playerBalance}");
             Console.WriteLine("Press 1 to start a new game");
             Console.WriteLine("Press 2 reset stats");
