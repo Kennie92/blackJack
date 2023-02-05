@@ -9,7 +9,7 @@ namespace BlackJackTest
         {
             const double startingBalance = 100.00;
             double playerBalance = startingBalance;
-           
+            string? playerName;
 
 
 
@@ -18,8 +18,8 @@ namespace BlackJackTest
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Welcome to Kennie's and Ludwig's Casino");
             Console.WriteLine("What is your name dear gambler?");
-            string playerName = Console.ReadLine();
-            Console.WriteLine("Hello" + playerName);
+            playerName = Console.ReadLine();
+            Console.WriteLine("\nHello " + playerName);
             Console.WriteLine($"Your current balance is {playerBalance}");
             Console.WriteLine("Press 1 to start a new game");
             Console.WriteLine("Press 2 reset stats");
@@ -27,7 +27,7 @@ namespace BlackJackTest
 
 
             Console.WriteLine("\nPlease type in menu option number and press <Enter>");
-            string menuOption = Console.ReadLine();
+            string? menuOption = Console.ReadLine();
 
             switch (menuOption)
             {
@@ -81,7 +81,7 @@ namespace BlackJackTest
 
                 case "2":
                     Console.WriteLine("Are you sure you want to reset your stats?\n1. Yes\n2. No");
-                    string answer = Console.ReadLine();
+                    string? answer = Console.ReadLine();
                     if (answer == "1")
                     {
                         playerBalance = startingBalance;
@@ -96,6 +96,7 @@ namespace BlackJackTest
 
             }
             Console.ReadKey();
+
         }
     }
 }
